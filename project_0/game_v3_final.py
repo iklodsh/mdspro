@@ -17,9 +17,9 @@ def game_core_v3(number: int = 1) -> int:
     min_number, max_number = 1, 100
     predict = 50
   
-    while number != predict:
+    while True:
         count += 1
-        
+        if number == predict: break
         if number < predict:
             max_number = predict # Уменьшаем верхнюю границу
             predict = (min_number+max_number) // 2 # При доробном делении округляем вниз
